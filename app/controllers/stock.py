@@ -10,6 +10,7 @@ stock_price_bp = Blueprint("stock_price", __name__)
 def get_stock_price_by_code():
 
     stock_code = request.args.get("stock_code")
+
     stock_price = get_stock_prices_by_code(stock_code)
 
     if stock_price:
